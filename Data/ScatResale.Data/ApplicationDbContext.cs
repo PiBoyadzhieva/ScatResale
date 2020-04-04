@@ -6,11 +6,10 @@
     using System.Threading;
     using System.Threading.Tasks;
 
-    using ScatResale.Data.Common.Models;
-    using ScatResale.Data.Models;
-
     using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
     using Microsoft.EntityFrameworkCore;
+    using ScatResale.Data.Common.Models;
+    using ScatResale.Data.Models;
 
     public class ApplicationDbContext : IdentityDbContext<ApplicationUser, ApplicationRole, string>
     {
@@ -25,6 +24,22 @@
         }
 
         public DbSet<Setting> Settings { get; set; }
+
+        public DbSet<Address> Addresses { get; set; }
+
+        public DbSet<Advertisement> Advertisements { get; set; }
+
+        public DbSet<Category> Categories { get; set; }
+
+        public DbSet<Image> Images { get; set; }
+
+        public DbSet<MainCategory> MainCategories { get; set; }
+
+        public DbSet<Message> Messages { get; set; }
+
+        public DbSet<UserAddress> UserAddresses { get; set; }
+
+        public DbSet<UserFavoriteProduct> UserFavoriteProducts { get; set; }
 
         public override int SaveChanges() => this.SaveChanges(true);
 

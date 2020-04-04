@@ -1,8 +1,8 @@
 ﻿namespace ScatResale.Data.Configurations
 {
-    using ScatResale.Data.Models;
     using Microsoft.EntityFrameworkCore;
     using Microsoft.EntityFrameworkCore.Metadata.Builders;
+    using ScatResale.Data.Models;
 
     public class ApplicationUserConfiguration : IEntityTypeConfiguration<ApplicationUser>
     {
@@ -28,6 +28,14 @@
                 .HasForeignKey(e => e.UserId)
                 .IsRequired()
                 .OnDelete(DeleteBehavior.Restrict);
+
+            appUser.HasMany(x => x.SentBox)
+                .WithOne(x => x.Sender)
+                .HasForeignKey(x => x.SenderId);
+
+            appUser.HasMany(x => x.Inbox)
+                .WithOne(x => x.Receiver)
+                .HasForeignKey(x => x.ReceiverId);
         }
     }
 }

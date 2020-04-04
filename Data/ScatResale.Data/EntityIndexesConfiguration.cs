@@ -2,9 +2,8 @@
 {
     using System.Linq;
 
-    using ScatResale.Data.Common.Models;
-
     using Microsoft.EntityFrameworkCore;
+    using ScatResale.Data.Common.Models;
 
     internal static class EntityIndexesConfiguration
     {

@@ -3,9 +3,8 @@ namespace ScatResale.Data.Models
 {
     using System;
 
-    using ScatResale.Data.Common.Models;
-
     using Microsoft.AspNetCore.Identity;
+    using ScatResale.Data.Common.Models;
 
     public class ApplicationRole : IdentityRole, IAuditInfo, IDeletableEntity
     {

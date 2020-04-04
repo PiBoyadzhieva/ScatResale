@@ -3,9 +3,8 @@
     using System;
     using System.Threading.Tasks;
 
-    using ScatResale.Data.Common;
-
     using Microsoft.EntityFrameworkCore;
+    using ScatResale.Data.Common;
 
     public class DbQueryRunner : IDbQueryRunner
     {
