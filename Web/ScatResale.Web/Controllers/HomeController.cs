@@ -1,16 +1,34 @@
 ﻿namespace ScatResale.Web.Controllers
 {
     using System.Diagnostics;
-
-    using ScatResale.Web.ViewModels;
+    using System.Linq;
 
     using Microsoft.AspNetCore.Mvc;
+    using ScatResale.Data.Common.Repositories;
+    using ScatResale.Data.Models;
+    using ScatResale.Services.Mapping;
+    using ScatResale.Web.ViewModels;
+    using ScatResale.Web.ViewModels.Home;
 
     public class HomeController : BaseController
     {
+        private readonly IDeletableEntityRepository<MainCategory> mainCategoriesRepository;
+
+        public HomeController(IDeletableEntityRepository<MainCategory> mainCategoriesRepository)
+        {
+            this.mainCategoriesRepository = mainCategoriesRepository;
+        }
+
         public IActionResult Index()
         {
-            return this.View();
+            var viewModel = new IndexViewModel();
+            var categories = this.mainCategoriesRepository.All()
+                .To<IndexCategoryViewModel>()
+                .ToList();
+
+            viewModel.Categories = categories;
+
+            return this.View(viewModel);
         }
 
         public IActionResult Privacy()

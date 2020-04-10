@@ -59,407 +59,86 @@
         </header>*@
     <header id="header-wrap">
         <!-- Navbar Start -->
-            <nav class="navbar navbar-expand-lg fixed-top">
-                <div class="container">
-                    <!-- Brand and toggle get grouped for better mobile display -->
-                    <div class="navbar-header">
-                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-navbar" aria-controls="main-navbar" aria-expanded="false" aria-label="Toggle navigation">
-                            <span class="navbar-toggler-icon"></span>
-                            <span class="lni-menu"></span>
-                            <span class="lni-menu"></span>
-                            <span class="lni-menu"></span>
-                        </button>
-                        <a class="navbar-dark text-success mr-5" asp-area="" asp-controller="Home" asp-action="Index"><span class="mb-0 h2">@GlobalConstants.SystemName</span></a>
-                    </div>
-                    <div class="collapse navbar-collapse" id="main-navbar">
-                        <ul class="navbar-nav mr-auto">
-                            <li class="nav-item active">
-                                <a class="nav-link" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
-                            </li>
-                            @*<li class="nav-item">
+        <nav class="navbar navbar-expand-lg fixed-top">
+            <div class="container">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header">
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-navbar" aria-controls="main-navbar" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                        <span class="lni-menu"></span>
+                        <span class="lni-menu"></span>
+                        <span class="lni-menu"></span>
+                    </button>
+                    <a class="navbar-dark text-success mr-5" asp-area="" asp-controller="Home" asp-action="Index"><span class="mb-0 h2">@GlobalConstants.SystemName</span></a>
+                </div>
+                <div class="collapse navbar-collapse" id="main-navbar">
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item active">
+                            <a class="nav-link" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+                        </li>
+                        @*<li class="nav-item">
                                 <a class="nav-link" asp-area="" asp-controller="Settings" asp-action="Index">Settings</a>
                             </li>*@
-                            <li class="nav-item">
-                                <a class="nav-link" asp-area="" asp-controller="Categories" asp-action="Category">Categories</a>
-                            </li>
-                            <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                    Listings
-                                </a>
-                                <div class="dropdown-menu">
-                                    <a class="dropdown-item" href="adlistinggrid.html">Ad Grid</a>
-                                    <a class="dropdown-item" href="adlistinglist.html">Ad Listing</a>
-                                    <a class="dropdown-item" href="ads-details.html">Listing Detail</a>
-                                </div>
-                            </li>
-                            <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                    Pages
-                                </a>
-                                <div class="dropdown-menu">
-                                    <a class="dropdown-item" href="about.html">About Us</a>
-                                    <a class="dropdown-item" href="services.html">Services</a>
-                                    <a class="dropdown-item" href="ads-details.html">Ads Details</a>
-                                    <a class="dropdown-item" href="post-ads.html">Ads Post</a>
-                                    <a class="dropdown-item" href="pricing.html">Packages</a>
-                                    <a class="dropdown-item" href="testimonial.html">Testimonial</a>
-                                    <a class="dropdown-item" href="faq.html">FAQ</a>
-                                    <a class="dropdown-item" href="404.html">404</a>
-                                </div>
-                            </li>
-                            <partial name="_LoginPartial" />
-                        </ul>
-                        <ul class="sign-in">
-                            <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="lni-user"></i> My Account</a>
-                                <div class="dropdown-menu">
-                                    <a class="dropdown-item" href="account-profile-setting.html"><i class="lni-home"></i> Account Home</a>
-                                    <a class="dropdown-item" href="account-myads.html"><i class="lni-wallet"></i> My Ads</a>
-                                    <a class="dropdown-item" href="account-favourite-ads.html"><i class="lni-heart"></i> Favourite ads</a>
-                                    <a class="dropdown-item" href="account-archived-ads.html"><i class="lni-folder"></i> Archived</a>
-                                    <a class="dropdown-item" href="login.html"><i class="lni-lock"></i> Log In</a>
-                                    <a class="dropdown-item" href="signup.html"><i class="lni-user"></i> Signup</a>
-                                    <a class="dropdown-item" href="forgot-password.html"><i class="lni-reload"></i> Forgot Password</a>
-                                    <a class="dropdown-item" href="account-close.html"><i class="lni-close"></i>Account close</a>
-                                </div>
-                            </li>
-                        </ul>
-                        <a class="tg-btn" href="post-ads.html">
-                            <i class="lni-pencil-alt"></i> Post An Ad
-                        </a>
-                    </div>
-                </div>
-
-
-            </nav>
-            <!-- Navbar End -->
-            <!-- Hero Area Start -->
-            <div id="hero-area">
-                <div class="overlay"></div>
-                <div class="container">
-                    <div class="row">
-                        <div class="col-md-12 col-lg-12 text-center">
-                            <div class="contents">
-                                <h2 class="head-title">Welcome to <span class="year">SCAT Resale</span></h2>
-                                <div class="search-bar">
-                                    <fieldset>
-                                        <form class="search-form">
-                                            <div class="form-group tg-inputwithicon">
-                                                <i class="lni-tag"></i>
-                                                <input type="text" name="customword" class="form-control" placeholder="What are you looking for">
-                                            </div>
-                                            <div class="form-group tg-inputwithicon">
-                                                <i class="lni-map-marker"></i>
-                                                <div class="tg-select">
-                                                    <select>
-                                                        <option value="none">All Locations</option>
-                                                        <option value="none">New York</option>
-                                                        <option value="none">California</option>
-                                                        <option value="none">Washington</option>
-                                                        <option value="none">Birmingham</option>
-                                                        <option value="none">Chicago</option>
-                                                        <option value="none">Phoenix</option>
-                                                    </select>
-                                                </div>
-                                            </div>
-                                            <div class="form-group tg-inputwithicon">
-                                                <i class="lni-layers"></i>
-                                                <div class="tg-select">
-                                                    <select>
-                                                        <option value="none">Select Categories</option>
-                                                        <option value="none">Mobiles</option>
-                                                        <option value="none">Electronics</option>
-                                                        <option value="none">Training</option>
-                                                        <option value="none">Real Estate</option>
-                                                        <option value="none">Services</option>
-                                                        <option value="none">Training</option>
-                                                        <option value="none">Vehicles</option>
-                                                    </select>
-                                                </div>
-                                            </div>
-                                            <button class="btn btn-common" type="button"><i class="lni-search"></i></button>
-                                        </form>
-                                    </fieldset>
-                                </div>
+                        <li class="nav-item">
+                            <a class="nav-link" asp-area="" asp-controller="Categories" asp-action="Category">Categories</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Listings
+                            </a>
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item" href="adlistinggrid.html">Ad Grid</a>
+                                <a class="dropdown-item" href="adlistinglist.html">Ad Listing</a>
+                                <a class="dropdown-item" href="ads-details.html">Listing Detail</a>
                             </div>
-                        </div>
-                    </div>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Pages
+                            </a>
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item" href="about.html">About Us</a>
+                                <a class="dropdown-item" href="services.html">Services</a>
+                                <a class="dropdown-item" href="ads-details.html">Ads Details</a>
+                                <a class="dropdown-item" href="post-ads.html">Ads Post</a>
+                                <a class="dropdown-item" href="pricing.html">Packages</a>
+                                <a class="dropdown-item" href="testimonial.html">Testimonial</a>
+                                <a class="dropdown-item" href="faq.html">FAQ</a>
+                                <a class="dropdown-item" href="404.html">404</a>
+                            </div>
+                        </li>
+                        <partial name="_LoginPartial" />
+                    </ul>
+                    <ul class="sign-in">
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="lni-user"></i> My Account</a>
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item" href="account-profile-setting.html"><i class="lni-home"></i> Account Home</a>
+                                <a class="dropdown-item" href="account-myads.html"><i class="lni-wallet"></i> My Ads</a>
+                                <a class="dropdown-item" href="account-favourite-ads.html"><i class="lni-heart"></i> Favourite ads</a>
+                                <a class="dropdown-item" href="account-archived-ads.html"><i class="lni-folder"></i> Archived</a>
+                                <a class="dropdown-item" href="login.html"><i class="lni-lock"></i> Log In</a>
+                                <a class="dropdown-item" href="signup.html"><i class="lni-user"></i> Signup</a>
+                                <a class="dropdown-item" href="forgot-password.html"><i class="lni-reload"></i> Forgot Password</a>
+                                <a class="dropdown-item" href="account-close.html"><i class="lni-close"></i>Account close</a>
+                            </div>
+                        </li>
+                    </ul>
+                    <a class="tg-btn" href="post-ads.html">
+                        <i class="lni-pencil-alt"></i> Post An Ad
+                    </a>
                 </div>
             </div>
-            <!-- Hero Area End -->
 
+
+        </nav>
+        <!-- Navbar End -->
     </header>
     <!-- Header Area wrapper End -->
 
-
-    <div class="container">
-        <partial name="_CookieConsentPartial" />
-        <section class="featured section-padding">
-            <div class="container text-center wow  wow fadeInUp">
-                <h1 class="section-title">You Using Free Lite Version :(</h1>
-                <h5>Purchase Full Version to Get All Pages, Features, Docs and Support!</h5></br>
-                <a href="https://rebrand.ly/classially-ud" target="_blank" rel="nofollow" class="btn btn-common btn-lg"><span class="lni-pointer-right"></span> Purchase Now!</a>
-            </div>
-        </section>
-        <!-- Featured Section End -->
-        <!-- Trending Categories Section Start -->
-        <section class="trending-cat section-padding">
-            <div class="container">
-                <h1 class="section-title">Product Categories</h1>
-                <div class="row">
-                    <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
-                        <a href="category.html">
-                            <div class="box">
-                                <div class="icon">
-                                    <img class="img-fluid" src="assets/img/category/img-1.png" alt="">
-                                </div>
-                                <h4>Vehicle</h4>
-                                <strong>189 Ads</strong>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
-                        <a href="category.html">
-                            <div class="box">
-                                <div class="icon">
-                                    <img class="img-fluid" src="assets/img/category/img-2.png" alt="">
-                                </div>
-                                <h4>Laptops</h4>
-                                <strong>255 Ads</strong>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
-                        <a href="category.html">
-                            <div class="box">
-                                <div class="icon">
-                                    <img class="img-fluid" src="assets/img/category/img-3.png" alt="">
-                                </div>
-                                <h4>Mobiles</h4>
-                                <strong>127 Ads</strong>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
-                        <a href="category.html">
-                            <div class="box">
-                                <div class="icon">
-                                    <img class="img-fluid" src="assets/img/category/img-4.png" alt="">
-                                </div>
-                                <h4>Electronics</h4>
-                                <strong>69 Ads</strong>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
-                        <a href="category.html">
-                            <div class="box">
-                                <div class="icon">
-                                    <img class="img-fluid" src="assets/img/category/img-5.png" alt="">
-                                </div>
-                                <h4>Computer</h4>
-                                <strong>172 Ads</strong>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
-                        <a href="category.html">
-                            <div class="box">
-                                <div class="icon">
-                                    <img class="img-fluid" src="assets/img/category/img-6.png" alt="">
-                                </div>
-                                <h4>Real Estate</h4>
-                                <strong>150 Ads</strong>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
-                        <a href="category.html">
-                            <div class="box">
-                                <div class="icon">
-                                    <img class="img-fluid" src="assets/img/category/img-7.png" alt="">
-                                </div>
-                                <h4>Home Appliances</h4>
-                                <strong>249 Ads</strong>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
-                        <a href="category.html">
-                            <div class="box">
-                                <div class="icon">
-                                    <img class="img-fluid" src="assets/img/category/img-8.png" alt="">
-                                </div>
-                                <h4>Jobs</h4>
-                                <strong>14 9Ads</strong>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!-- Trending Categories Section End -->
-        <!-- Featured Section Start -->
-        <section class="featured section-padding">
-            <div class="container text-center wow  wow fadeInUp">
-                <h1 class="section-title">You Using Free Lite Version :(</h1>
-                <h5>Purchase Full Version to Get All Pages, Features, Docs and Support!</h5></br>
-                <a href="https://rebrand.ly/classially-ud" target="_blank" rel="nofollow" class="btn btn-common btn-lg"><span class="lni-pointer-right"></span> Purchase Now!</a>
-            </div>
-        </section>
-        <!-- Featured Section End -->
-        <!-- Services Section Start -->
-        <section class="services section-padding">
-            <div class="container">
-                <div class="row">
-                    <!-- Services item -->
-                    <div class="col-md-6 col-lg-4 col-xs-12">
-                        <div class="services-item wow fadeInRight" data-wow-delay="0.2s">
-                            <div class="icon">
-                                <i class="lni-book"></i>
-                            </div>
-                            <div class="services-content">
-                                <h3><a href="#">Full Documented</a></h3>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo aut magni perferendis repellat rerum assumenda facere.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Services item -->
-                    <div class="col-md-6 col-lg-4 col-xs-12">
-                        <div class="services-item wow fadeInRight" data-wow-delay="0.4s">
-                            <div class="icon">
-                                <i class="lni-leaf"></i>
-                            </div>
-                            <div class="services-content">
-                                <h3><a href="#">Clean & Modern Design</a></h3>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo aut magni perferendis repellat rerum assumenda facere.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Services item -->
-                    <div class="col-md-6 col-lg-4 col-xs-12">
-                        <div class="services-item wow fadeInRight" data-wow-delay="0.6s">
-                            <div class="icon">
-                                <i class="lni-cog"></i>
-                            </div>
-                            <div class="services-content">
-                                <h3><a href="#">Great Features</a></h3>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo aut magni perferendis repellat rerum assumenda facere.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Services item -->
-                    <div class="col-md-6 col-lg-4 col-xs-12">
-                        <div class="services-item wow fadeInRight" data-wow-delay="0.8s">
-                            <div class="icon">
-                                <i class="lni-spray"></i>
-                            </div>
-                            <div class="services-content">
-                                <h3><a href="#">Completely Customizable</a></h3>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo aut magni perferendis repellat rerum assumenda facere.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Services item -->
-                    <div class="col-md-6 col-lg-4 col-xs-12">
-                        <div class="services-item wow fadeInRight" data-wow-delay="1s">
-                            <div class="icon">
-                                <i class="lni-emoji-smile"></i>
-                            </div>
-                            <div class="services-content">
-                                <h3><a href="#">User Friendly</a></h3>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo aut magni perferendis repellat rerum assumenda facere.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Services item -->
-                    <div class="col-md-6 col-lg-4 col-xs-12">
-                        <div class="services-item wow fadeInRight" data-wow-delay="1.2s">
-                            <div class="icon">
-                                <i class="lni-layout"></i>
-                            </div>
-                            <div class="services-content">
-                                <h3><a href="#">Awesome Layout</a></h3>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo aut magni perferendis repellat rerum assumenda facere.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!-- Services Section End -->
-        <!-- Counter Area Start-->
-        <section class="counter-section section-padding">
-            <div class="container">
-                <div class="row">
-                    <!-- Counter Item -->
-                    <div class="col-md-3 col-sm-6 work-counter-widget text-center">
-                        <div class="counter">
-                            <div class="icon"><i class="lni-layers"></i></div>
-                            <div class="counterUp">12090</div>
-                            <p>Regular Ads</p>
-                        </div>
-                    </div>
-                    <!-- Counter Item -->
-                    <div class="col-md-3 col-sm-6 work-counter-widget text-center">
-                        <div class="counter">
-                            <div class="icon"><i class="lni-map"></i></div>
-                            <div class="counterUp">350</div>
-                            <p>Locations</p>
-                        </div>
-                    </div>
-                    <!-- Counter Item -->
-                    <div class="col-md-3 col-sm-6 work-counter-widget text-center">
-                        <div class="counter">
-                            <div class="icon"><i class="lni-user"></i></div>
-                            <div class="counterUp">23453</div>
-                            <p>Reguler Members</p>
-                        </div>
-                    </div>
-                    <!-- Counter Item -->
-                    <div class="col-md-3 col-sm-6 work-counter-widget text-center">
-                        <div class="counter">
-                            <div class="icon"><i class="lni-briefcase"></i></div>
-                            <div class="counterUp">250</div>
-                            <p>Premium Ads</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!-- Counter Area End-->
-        <!-- Featured Section Start -->
-        <section class="featured section-padding">
-            <div class="container text-center wow  wow fadeInUp">
-                <h1 class="section-title">You Using Free Lite Version :(</h1>
-                <h5>Purchase Full Version to Get All Pages, Features, Docs and Support!</h5></br>
-                <a href="https://rebrand.ly/classially-ud" target="_blank" rel="nofollow" class="btn btn-common btn-lg"><span class="lni-pointer-right"></span> Purchase Now!</a>
-            </div>
-        </section>
-        <!-- Featured Section End -->
-        <!-- Subscribe Section Start -->
-        <section class="subscribes section-padding">
-            <div class="container">
-                <div class="row wrapper-sub">
-                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-                        <p>Join our 10,000+ subscribers and get access to the latest templates, freebies, announcements and resources!</p>
-                    </div>
-                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-                        <form>
-                            <div class="subscribe">
-                                <input class="form-control" name="email" placeholder="Your email here" required="" type="email">
-                                <button class="btn btn-common" type="submit">Subscribe</button>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!-- Subscribe Section End -->
-        <main role="main" class="pb-3">
-            @this.RenderBody()
-        </main>
-    </div>
+    <main role="main" class="pb-3">
+        @this.RenderBody()
+    </main>
 
     @*<footer class="border-top footer text-muted">
             <div class="container">
